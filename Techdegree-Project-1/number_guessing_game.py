@@ -14,7 +14,11 @@ def start_game():
     number_of_tries = 0
 
     while True:
-        user_guess = int(input("Please enter a number between 1-20: "))
+    	try:
+    	
+        	user_guess = int(input("Please enter a number between 1-20: "))
+        except ValueError as err:
+        	print("Please enter a number: {}".format(err))
         number_of_tries += 1
 
         if user_guess < secret_number:
