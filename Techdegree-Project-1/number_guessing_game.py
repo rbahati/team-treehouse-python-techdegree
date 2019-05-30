@@ -35,10 +35,10 @@ def start_game():
             number_of_tries += 1
 
             if user_guess < secret_number:
-                print("It's lower")
+                print("It's higher!")
 
             elif user_guess > secret_number:
-                print("It's higher")
+                print("It's lower!")
 
             else:
                 print("You got it!")
