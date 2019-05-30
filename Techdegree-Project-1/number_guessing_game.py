@@ -49,7 +49,7 @@ def start_game():
                     print("The score to beat is {}".format(min(scores)))
                     continue
                 elif play_again.lower().startswith("n"):
-                    print("Thank you for playing and see you soon")
+                    print("Thank you for playing and see you soon!")
                     play = False
 
 if __name__ == '__main__':
