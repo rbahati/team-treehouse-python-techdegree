@@ -21,11 +21,13 @@ def start_game():
             user_guess = int(input("Please enter a number between 1-20: "))
             
             if user_guess > 20:
+                number_of_tries += 1
                 raise ValueError("The number you entered is above the range between 1-20")
-                number_of_tries += 1
+                
             elif user_guess < 1 :
-                raise ValueError("The number you entered is below the range between 1-20")
                 number_of_tries += 1
+                raise ValueError("The number you entered is below the range between 1-20")
+                
         except ValueError as err:
             print("Please try again!", "Here is the specific error message => {}".format(err))
             number_of_tries += 1
